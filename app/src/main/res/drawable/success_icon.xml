@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="120dp"
+            android:height="120dp"
+            android:viewportWidth="120"
+            android:viewportHeight="120">
+            <!-- Outer circle -->
+            <path
+                android:name="circle"
+                android:pathData="M60,60m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0"
+                android:strokeWidth="6"
+                android:strokeColor="#3D8D7A"
+                android:strokeLineCap="round"
+                android:fillColor="#A3D1C6"
+                android:fillAlpha="0.2"/>
+
+            <!-- Inner elements -->
+            <path
+                android:name="success_ring"
+                android:pathData="M60,60m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
+                android:strokeWidth="4"
+                android:strokeColor="#B3D8A8"
+                android:fillColor="#FBFFE4"/>
+
+            <!-- Check mark path -->
+            <path
+                android:name="check"
+                android:pathData="M40,60 L55,75 L80,45"
+                android:strokeWidth="6"
+                android:strokeColor="#3D8D7A"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"/>
+        </vector>
+    </aapt:attr>
+
+    <!-- Circle scale animation -->
+    <target android:name="circle">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="400"
+                    android:propertyName="scaleX"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/overshoot"/>
+                <objectAnimator
+                    android:duration="400"
+                    android:propertyName="scaleY"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/overshoot"/>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <!-- Check mark animation -->
+    <target android:name="check">
+        <aapt:attr name="android:animation">
+            <set android:startOffset="200">
+                <objectAnimator
+                    android:duration="300"
+                    android:propertyName="trimPathEnd"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/fast_out_slow_in"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

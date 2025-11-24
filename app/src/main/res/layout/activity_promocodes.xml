@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".PromocodesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Promocodes"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Active Promocodes Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active Promocodes"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Promocode Cards -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/PromoCodeCard">
+
+            <LinearLayout
+                style="@style/PromoCodeCardContent"
+                android:background="#EAF6E1">
+
+                <TextView
+                    android:id="@+id/promocodeLabel1"
+                    style="@style/PromoLabel"
+                    android:text="SPRING2025" />
+
+                <TextView
+                    android:id="@+id/promocodePercentageTextView"
+                    style="@style/PromoDiscount"
+                    android:text="20% OFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout style="@style/PromoDetailContainer">
+
+                        <ImageView
+                            style="@style/PromoIcon"
+                            android:src="@drawable/ic_calender" />
+
+                        <TextView
+                            style="@style/PromoDetailText"
+                            android:text="Expires: 11 days" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/PromoDetailContainer">
+
+                        <ImageView
+                            style="@style/PromoIcon"
+                            android:src="@drawable/ic_money" />
+
+                        <TextView
+                            style="@style/PromoDetailText"
+                            android:text="5 plants" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/PromoUseButton"
+                    android:text="Use Now"
+                    android:textColor="#009688" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Similar cards for other promocodes with different colors -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/PromoCodeCard"
+            app:cardBackgroundColor="#FFF8E1">
+            <!-- Similar content structure -->
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/PromoCodeCard"
+            app:cardBackgroundColor="#E8F5E9">
+            <!-- Similar content structure -->
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Add Voucher Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Voucher"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter voucher code"
+                    app:startIconDrawable="@drawable/ic_menu"
+                    app:startIconTint="#99BC85">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/voucherEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addVoucherButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#009688"
+                    android:paddingVertical="12dp"
+                    android:text="Add Voucher"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

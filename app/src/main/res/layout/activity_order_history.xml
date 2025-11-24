@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".OrderHistoryActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Order History"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Order Items -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/OrderCard"
+                app:cardBackgroundColor="#E4EFE7">
+
+                <LinearLayout style="@style/OrderCardContent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/OrderNumber"
+                            android:text="Order #12345" />
+
+                        <com.google.android.material.chip.Chip
+                            style="@style/OrderStatusChip"
+                            android:layout_marginStart="8dp"
+                            android:text="Pending"
+                            app:chipBackgroundColor="#FFF9C4" />
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout style="@style/OrderDetailsRow">
+
+                        <LinearLayout style="@style/OrderDetailItem">
+
+                            <ImageView
+                                style="@style/OrderDetailIcon"
+                                app:srcCompat="@drawable/ic_calender" />
+
+                            <TextView
+                                style="@style/OrderDetailText"
+                                android:text="March 23, 2025" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/OrderDetailItem">
+
+                            <ImageView
+                                style="@style/OrderDetailIcon"
+                                app:srcCompat="@drawable/ic_time" />
+
+                            <TextView
+                                style="@style/OrderDetailText"
+                                android:text="14:30" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/OrderDetailItem">
+
+                            <ImageView
+                                style="@style/OrderDetailIcon"
+                                app:srcCompat="@drawable/ic_money" />
+
+                            <TextView
+                                style="@style/OrderDetailText"
+                                android:text="Rs: 750.00"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/Divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/OrderActionButton"
+                            android:text="Track Order"
+                            android:textColor="#000000"
+                            app:icon="@drawable/ic_location"
+                            app:iconTint="#009688" />
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/OrderActionButton"
+                            android:layout_marginStart="8dp"
+                            android:text="Leave Review"
+                            android:textColor="#000000"
+                            app:icon="@drawable/ic_review"
+                            app:iconTint="#009688" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Repeat for other orders with different status colors -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/OrderCard"
+                app:cardBackgroundColor="#E4EFE7">
+
+                <LinearLayout
+                    style="@style/OrderCardContent"
+                    android:background="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/OrderNumber"
+                            android:text="Order #23453" />
+
+                        <com.google.android.material.chip.Chip
+                            style="@style/OrderStatusChip"
+                            android:layout_marginStart="8dp"
+                            android:text="Delivered"
+                            app:chipBackgroundColor="#C8E6C9" />
+                    </LinearLayout>
+
+                    <!-- Similar content structure as above -->
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Add more order cards with different statuses -->
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

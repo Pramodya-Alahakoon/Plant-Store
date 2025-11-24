@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".CheckoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Order Summary Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order Summary"
+                    android:textColor="#009688"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Order Item Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/plantImageView"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/orchids"
+                            app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/plantNameTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Plant Name"
+                                android:textColor="#1A1A1A"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/plantPriceTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Rs.500.00"
+                                android:textColor="#090909"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/quantityTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/quantity_background"
+                            android:padding="8dp"
+                            android:text="× 1"
+                            android:textColor="#1A1A1A"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Price Summary -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/PriceRow">
+
+                        <TextView
+                            style="@style/PriceLabel"
+                            android:text="Subtotal" />
+
+                        <TextView
+                            android:id="@+id/subtotalTextView"
+                            style="@style/PriceValue"
+                            android:text="Rs: 750.00" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/PriceRow"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            style="@style/PriceLabel"
+                            android:text="Delivery Cost" />
+
+                        <TextView
+                            android:id="@+id/deliveryCostTextView"
+                            style="@style/PriceValue"
+                            android:text="Rs: 250.00" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="12dp"
+                        android:background="#E0E0E0" />
+
+                    <LinearLayout style="@style/PriceRow">
+
+                        <TextView
+                            style="@style/PriceLabel"
+                            android:text="Total"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/totalTextView"
+                            style="@style/PriceValue"
+                            android:text="Rs: 250.00"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Shipping Details Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#E4EFE7"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shipping Details"
+                    android:textColor="#009688"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout style="@style/InfoRow">
+
+                    <ImageView
+                        style="@style/InfoIcon"
+                        app:srcCompat="@drawable/ic_profile"
+                        app:tint="#1A1A1A" />
+
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        style="@style/InfoText"
+                        android:text="User" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoRow">
+
+                    <ImageView
+                        style="@style/InfoIcon"
+                        app:srcCompat="@drawable/ic_phone"
+                        app:tint="#1A1A1A" />
+
+                    <TextView
+                        android:id="@+id/phoneTextView"
+                        style="@style/InfoText"
+                        android:text="+94 71 123456" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoRow">
+
+                    <ImageView
+                        style="@style/InfoIcon"
+                        app:srcCompat="@drawable/ic_email"
+                        app:tint="#1A1A1A" />
+
+                    <TextView
+                        android:id="@+id/emailTextView"
+                        style="@style/InfoText"
+                        android:text="user@gmail.com" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoRow">
+
+                    <ImageView
+                        style="@style/InfoIcon"
+                        app:srcCompat="@drawable/ic_location"
+                        app:tint="#1A1A1A" />
+
+                    <TextView
+                        android:id="@+id/addressTextView"
+                        style="@style/InfoText"
+                        android:text="Matara, Srilanka" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Payment Details Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#E4EFE7"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Details"
+                    android:textColor="#009688"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <LinearLayout style="@style/InfoRow">
+
+                    <ImageView
+                        style="@style/InfoIcon"
+                        app:srcCompat="@drawable/ic_credit_card"
+                        app:tint="#1A1A1A" />
+
+                    <TextView
+                        android:id="@+id/cardNumberTextView"
+                        style="@style/InfoText"
+                        android:text="**** **** **** 1234" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoRow">
+
+                    <ImageView
+                        style="@style/InfoIcon"
+                        app:srcCompat="@drawable/ic_calender"
+                        app:tint="#1A1A1A" />
+
+                    <TextView
+                        android:id="@+id/expiryDateTextView"
+                        style="@style/InfoText"
+                        android:text="MM/YY" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/InfoRow">
+
+                    <ImageView
+                        style="@style/InfoIcon"
+                        app:srcCompat="@drawable/ic_lock"
+                        app:tint="#1A1A1A" />
+
+                    <TextView
+                        android:id="@+id/cvvTextView"
+                        style="@style/InfoText"
+                        android:text="***" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirmOrderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
+            android:padding="16dp"
+            android:text="Confirm"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            app:elevation="4dp" />
+
+    </LinearLayout>
+</ScrollView>

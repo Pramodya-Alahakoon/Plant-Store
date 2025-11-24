@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Leafy</string>
+    <string name="app_logo">Leafy Logo</string>
+    <string name="slide_heading">Welcome To Leafy!</string>
+    <string name="slide_description">Welcome to the world of lush greens and blooming beauty with us.</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="dont_have_account_sign_up">Dont have an account? Sign Up</string>
+
+    <string name="forgot_password_description">Please enter your email address. You will receive a link to create a new password via email.</string>
+    <string name="send">Send</string>
+    <string name="password_reset">Your Password Has Been Reset!</string>
+    <string name="welcome_back">Log in with your new credentials. Welcome Back</string>
+    <string name="done">Done</string>
+
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_name">Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_account_sign_in">Already have an account? Sign In</string>
+    <string name="account_created">Your Account Has Been Created!</string>
+
+    <string name="account_created_heading">Account Created!</string>
+    <string name="account_created_description">Your account has been created successfully. Login to continue...</string>
+
+
+    <string name="promo_heading">Enjoy 30% Off On Selected Items!</string>
+    <string name="promo_heading2">Exclusive Weekend Deal! Save 20%...</string>
+    <string name="shop_now">Shop Now</string>
+    <string name="categories_heading">Plant Categories</string>
+    <string name="category_indoor">Indoor</string>
+    <string name="category_outdoor">Outdoor</string>
+    <string name="category_air_purifying">Air-Purifying</string>
+    <string name="category_succulents_cacti">Succulents n Cacti</string>
+    <string name="category_flowering_plants">Flowering Plants</string>
+    <string name="category_herbs_edibles">Herbs n Edibles</string>
+
+    <string name="best_sellers">Best Sellers</string>
+    <string name="view_all">View All</string>
+
+    <string name="filter">Filter</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="clear_filters">Clear Filters</string>
+
+
+    <string name="sortLowToHigh">Price: Low to High</string>
+    <string name="sortHighToLow">Price: High to Low</string>
+    <string name="sortNewest">Newest</string>
+    <string name="sortCustomerRating">Customer Rating</string>
+    <string name="sortMostPopular">Most Popular</string>
+    <string name="rating">Rating</string>
+    <string name="color">Color</string>
+    <string name="pot_type">Pot Type</string>
+    <string name="type">Type</string>
+    <string name="plant_image">Plant image</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="successfully_submitted_review">Successfully submitted the review</string>
+    <string name="please_add_rating_comment">Please add a rating or comment</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="menu">Menu</string>
+    <string name="cart">Cart</string>
+
+    <string name="success_icon">Success</string>
+    <string name="success_icon_description">Success indicator icon</string>
+
+    <string name="review_icon">Review Icon</string>
+    <string name="share_experience">Share Your Experience</string>
+    <string name="feedback_helps">Your feedback helps us improve our service</string>
+    <string name="rate_experience">Rate your experience</string>
+    <string name="your_comment">Your Comment</string>
+    <string name="share_thoughts_hint">Share your thoughts...</string>
+    <string name="submit_review">Submit Review</string>
+
+</resources>

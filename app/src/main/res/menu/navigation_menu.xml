@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_categories"
+            android:title="Categories">
+            <menu>
+                <item
+                    android:id="@+id/nav_indoor"
+                    android:title="Indoor Plants"/>
+                <item
+                    android:id="@+id/nav_outdoor"
+                    android:title="Outdoor Plants"/>
+                <item
+                    android:id="@+id/nav_air_purifying"
+                    android:title="Air Purifying Plants"/>
+                <item
+                    android:id="@+id/nav_succulents_cacti"
+                    android:title="Succulents n Cacti"/>
+                <item
+                    android:id="@+id/nav_flowering"
+                    android:title="Flowering Plants"/>
+                <item
+                    android:id="@+id/nav_herbs_edibles"
+                    android:title="Herbs n Edibles"/>
+            </menu>
+        </item>
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_products"
+            android:title="Products"/>
+        <item
+            android:id="@+id/nav_best_sellers"
+            android:icon="@drawable/ic_best_sellers"
+            android:title="Best Sellers"/>
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/ic_support"
+            android:title="Support"/>
+    </group>
+</menu>
