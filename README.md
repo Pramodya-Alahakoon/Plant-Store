@@ -25,7 +25,9 @@ Uses SQLite or SharedPreferences to store cart items, favorites, and basic user 
 🛠️ Tech Stack & Architecture
 
 Language: Kotlin
+
 UI: XML layouts, Activities & Fragments
+
 Data Storage:  SharedPreferences
 
 🎯 Use Case
@@ -33,7 +35,11 @@ Data Storage:  SharedPreferences
 A great example project for demonstrating:
 
 Core Android development without modern frameworks
+
 XML-based UI design
+
 Local data persistence
+
 Clean app structure without Jetpack dependencies
+
 An e-commerce shopping flow built from scratch
